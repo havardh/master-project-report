@@ -3,7 +3,7 @@ title: Modern Hetrogeneous Computing
 email: havardwhoiby@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   GPU computing in Julia
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/master-project-report" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: havardh
 github_username:  havardh

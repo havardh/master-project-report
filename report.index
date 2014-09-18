@@ -9,7 +9,7 @@ permalink: /report/
     {% for chapter in sorted_chapters %}
       <li>
         <h2>
-          <a class="post-link" href="{{ chapter.url }}">{{ chapter.title }}</a>
+          <a class="post-link" href="{{ chapter.url | prepend: site.baseurl }}">{{ chapter.title }}</a>
         </h2>
       </li>
     {% endfor %}
