@@ -1,0 +1,16 @@
+---
+layout: page
+title: Report
+permalink: /report/
+---
+
+  <ul class="post-list">
+    {% assign sorted_chapters = (site.collections.report.docs | sort: 'order') %}
+    {% for chapter in sorted_chapters %}
+      <li>
+        <h2>
+          <a class="post-link" href="{{ chapter.url }}">{{ chapter.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
