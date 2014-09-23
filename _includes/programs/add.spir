@@ -1,0 +1,15 @@
+    target triple = "spir"
+    
+    define void @add(i32* nocapture readonly %a, 
+                     i32* nocapture readonly %b, 
+                     i32* nocapture %c) #0 {
+      %1 = load i32* %a, align 4, !tbaa !2
+      %2 = load i32* %b, align 4, !tbaa !2
+      %3 = add nsw i32 %2, %1
+      store i32 %3, i32* %c, align 4, !tbaa !2
+      ret void
+    }
+    
+    !opencl.kernels = !{!0}
+    !llvm.ident = !{!1}
+
