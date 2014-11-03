@@ -29,7 +29,17 @@ efficient. A different example is the ARM big.LITTLE
 architecture. This architecure combines two differnet core types, one
 small (low power) and one big (high performance) into one chip.
 
-### Frameworks ###
+### Programming environments ###
+
+Programming a hetrogeneous system is more complex than programming a
+homogeneous system. Primarly the memory hierarchy has to be taken into
+account as bandwidth is one of the largest limiting factor when it
+comes to performance. Secondly the abstraction we are used to when
+programming a CPU does not always translate into efficient code on a
+different architecture. This complexity has to be dealt with by the
+programmer. In current solution these are made accesible through
+software libraries and low-level languages subsets, mostly based on
+C/C++.
 
 #### OpenCL ####
 
@@ -65,7 +75,7 @@ implementation. This implementation is unfortunely not released.
 ### The old fashion ###
 
 The current way of writing efficient code for a GPU is to use a low
-level language like C write kernels in a subset of the language and
+level language like C, write kernels in a subset of the language and
 compiling them with a separate compiler in the case of CUDA and by
 linking to a library for OpenCL.
 
@@ -90,7 +100,12 @@ to the one used in the numba python compiler.
 The Julia [http://arxiv.org/abs/1209.5145] language is a dynamic
 programming language for technical computing, built on LLVM. It
 provides a high level abstraction with comparable performance to low
-level languages like C and C++.
+level languages like C and C++. One of the main goals of the language
+is to provide high level abstractions but also enabling the programmer
+to dive into low level optimization without having to resort to a
+low-level language. This makes Julia stand aside from languages like
+Matlab, Python or R, where you will have to go into C in order to peal
+away the abstractions. 
 
 {% highlight julia %}
 a = b + c

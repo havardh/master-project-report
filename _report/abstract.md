@@ -15,7 +15,7 @@ GPGPU, General-purpose computing on graphics processing units. These
 libraries exposes low level APIs and require the applications to be
 designed in languages like C/C++.
 
-In the real of technical computing a lot of applications are
+In the realm of technical computing a lot of applications are
 prototyped in high-level languages like Python, Matlab, R and
 Mathematica. These languages enables high productivity but suffers
 from low performance due to poor interpreting/compilation
